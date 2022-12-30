@@ -15,8 +15,8 @@ public class WelcomeRestController {
 		logger.info("***** WelcomeRestController::Constructor *****");
 	}
 
-	@GetMapping
-	public String welcomeMsg() {
+	@GetMapping(value = "/welcome/{name}")
+	public String welcomeMsg(@PathVariable("name") String name) {
 		logger.info("***** welcomeMsg() execution start *****");
 		String msg = "Welcome to Ashok IT..!!";
 		logger.info("***** welcomeMsg() execution end *****");
